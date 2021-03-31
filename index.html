@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<title>Car Condition Prediction</title>
+<body>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+body {
+    background-color:black;
+}
+.text{
+	padding: 20px 315px; 
+}
+.text1{
+	padding: 20px 315px;
+}
+.text2{
+	padding: 20px 315px;
+}
+.button{
+	padding: 10px 355px;
+	color: red;
+}
+    </style>
+    <form action="{{url_for ('predict')}}"method='post'>
+	<div class="text">
+<input type="text" name="buying" placeholder="Buying" required="required">
+</div>
+<div class="text1">
+<input type="text" name="maint" placeholder="Maint(Size)" required="required">
+</div>
+<div class="text2">
+<input type="text" name="safety" placeholder="Safety" required="required">
+   </div>
+   <div class="button">
+
+<button type="submit" form="form1" value="Submit">Predict</button>
+
+</div>
+    </form>
+    <br>
+    <br>
+{{"prediction_text"}}
+</body>
+</html>
+
